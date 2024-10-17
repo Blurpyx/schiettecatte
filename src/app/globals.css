@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F1F1F1;
+  --foreground: #110D0D;
+
+  --red: #D91A16;
+  --bright-red: #EB506C;
+  --dark-red: #90332F;
+
+  --dark: #291F1E;
+  --light: #C9C9C9;
+  --platinum: #DDDDDD;
+  
+  --blue: #477998;
+  --bright-blue: #8DABBF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #110D0D;
+    --foreground: #F1F1F1;
+
+    --dark: #C9C9C9;
+    --light: #291F1E;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
